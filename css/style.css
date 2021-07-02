@@ -1,0 +1,143 @@
+/* reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+:root {
+    --primaryColor: #e5761d;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/hero/bg.jpg);
+    background-repeat: no-repeat;
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: #fff;
+}
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height:4.7rem;
+    align-items: center;
+}
+.navigation:hover{
+    background: rgba(0, 0, 0, 0.7);
+    transition: .9s;
+}
+/* logo  */
+.navigation .logo img{
+    width: 35%;
+}
+.navigation .logo a{
+    position: relative;
+}
+.navigation .logo a:hover{
+    transition: .5s;
+}
+.navigation .logo a::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -.3rem;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: 50% 50%;
+    width: 100%;
+    height: 1px;
+    background:#E7751D;
+    transition: transform 250ms;
+}
+.navigation .logo a:hover::after{
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* nav-menu  */
+
+.navigation .nav-menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.navigation .nav-menu ul li{
+    list-style: none;
+}
+.navigation .nav-menu ul li a{
+    position: relative;
+}
+.navigation .nav-menu ul li:not(:last-of-type){
+    margin-right: 3.5rem;
+}
+.navigation .nav-menu ul li a:hover{
+    color:#E7751D;
+    transition: .5s;
+}
+.navigation .nav-menu ul li a:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -.9rem;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: 50% 50%;
+    width: 100%;
+    height: 1px;
+    background:#E7751D;
+    transition: transform 250ms;
+}
+.navigation ul li a:hover::after{
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* dropdown  */
+
+/* contact us button  */
+ 
+.contact__us-btn a{
+    position: relative;
+    padding: 15px 70px 15px 15px;
+    border: 1px solid #E7751D;
+}
+.contact__us-btn a:hover{
+    background: #B45913;
+    transition: .5s;
+}
+.contact__us-btn a::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 40px;
+    width: 2.1975rem;
+    height: 100%;
+    background-color: transparent;
+    border-left: 1px solid #E7751D;
+    display: block;
+}
+.contact__us-btn a:hover::after{
+    content: '';
+    background: #E7751D;
+    transition: .5s;
+}
+
+ .navigation__cta::before{
+    content: '\203A';
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    z-index: 2;
+ }
+
+/* Dropdown Start Here  */
+
+
