@@ -11,13 +11,10 @@
 body{
     width: 100%;
     height: 100vh;
-}
-header{
-    width: 100%;
-    height: 100vh;
     background: url(../img/hero/bg.jpg);
     background-repeat: no-repeat;
 }
+
 a{
     text-decoration: none;
     text-transform: uppercase;
@@ -30,10 +27,11 @@ a{
     width: 100%;
     height:4.7rem;
     align-items: center;
+    transition: .9s;
 }
 .navigation:hover{
-    background: rgba(0, 0, 0, 0.7);
-    transition: .9s;
+    background: rgba(0, 0, 0, 0.5);
+
 }
 /* logo  */
 .navigation .logo img{
@@ -63,11 +61,12 @@ a{
 
 /* nav-menu  */
 
-.navigation .nav-menu ul{
+.navigation .nav-menu > ul{
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
+    margin-right: 40%;
 }
 .navigation .nav-menu ul li{
     list-style: none;
@@ -99,6 +98,9 @@ a{
 }
 
 /* dropdown  */
+
+
+
 
 /* contact us button  */
  
@@ -141,3 +143,53 @@ a{
 /* Dropdown Start Here  */
 
 
+/* hero section start here  */
+
+.hero-wrapper{
+    padding: 5rem 17.5rem 8.125rem 15rem;
+}
+.hero-content{
+    width: 49.5%;
+}
+.headaer-subtitle{
+    font-size: 1rem;
+    color: #E7751D;
+    display: block;
+    font-family: "Forza", sans-serif;
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15px;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+}
+.header-title{
+    width: 130%;
+    font-size: 2.7rem;
+    line-height: 1.1;
+    color: #fff;
+}
+.content-text{
+    width: 80%;
+    margin-bottom: 2.25rem;
+    color: #fff;
+    font-size:1.2rem ;
+}
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+/* contact us  */
+
+.hero-content .contact__us-btn a{
+    background: #B45913;
+}
+.hero-content .contact__us-btn a::after{
+    background: #E7751D;
+}
+.hero-content .navigation__cta::before{
+    right: 6%;
+ }
