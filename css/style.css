@@ -5,6 +5,27 @@
     box-sizing: border-box;
     outline: none;
 }
+@font-face {
+    font-family: forza;
+    src: url(../fonts/forza-bold.woff);
+}
+@font-face {
+    font-family: druk-wide-m;
+    src: url(../fonts/DrukWide-Medium.woff);
+}
+@font-face {
+    font-family:openSans-light ;
+    src: url(../fonts/OpenSans-Light.woff);
+}
+@font-face {
+    font-family: openSans-regular ;
+    src: url(../fonts/OpenSans-Regular.woff);
+}
+@font-face {
+    font-family:openSans-semibold ;
+    src: url(../fonts/OpenSans-SemiboldItalic.woff);
+}
+
 :root {
     --primaryColor: #e5761d;
 }
@@ -13,7 +34,7 @@ body{
     height: 100vh;
     background: url(../img/hero/bg.jpg);
     background-repeat: no-repeat;
-    font-family: 'Dizhitl', sans-serif;
+    font-family: forza;
 }
 
 a{
@@ -74,15 +95,19 @@ a{
 }
 .navigation .nav-menu ul li a{
     position: relative;
+    font-size: 8px;
+    font-weight: 300;
+    font-family: druk-wide-m;
+    letter-spacing: 1px;
 }
 .navigation .nav-menu ul li:not(:last-of-type){
-    margin-right: 3.5rem;
+    margin-right: 1.2rem;
 }
 .navigation .nav-menu ul li a:hover{
     color:#E7751D;
     transition: .5s;
 }
-.navigation .nav-menu > ul li a:after{
+.navigation .nav-menu > ul > li > a:after{
     content: '';
     position: absolute;
     left: 50%;
@@ -107,8 +132,11 @@ a{
  
 .contact__us-btn a{
     position: relative;
-    padding: 10px 70px 10px 15px;
+    padding: 15px 70px 15px 15px;
     border: 2px solid #B45913;
+    font-family: druk-wide-m , sans-serif;
+    font-size: 8px;
+    letter-spacing: 1px;
 }
 .contact__us-btn a:hover{
     background: #B45913;
@@ -138,6 +166,7 @@ a{
     position: absolute;
     top: 30%;
     right: 10%;
+    font-size: 15px;
     z-index: 2;
  }
 
@@ -157,22 +186,24 @@ a{
     z-index: 5;
 }
 .headaer-subtitle{
-    font-size: 1rem;
+    font-size: 2rem;
     color: #E7751D;
     display: block;
-    font-family: "Forza", sans-serif;
+    font-family: forza;
     font-weight: bold;
     font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.15px;
+    letter-spacing: 0.50px;
     line-height: 1.1;
     margin-bottom: 0.75rem;
 }
 .header-title{
-    width: 130%;
-    font-size: 2.3rem;
-    line-height: 1.1;
+    width: 157%;
+    font-size: 1.9rem;
+    font-family: druk-wide-m , sans-serif;
+    line-height: 1.2;
     color: #fff;
+    letter-spacing:.1rem;
 }
 .content-text{
     width: 80%;
@@ -192,7 +223,7 @@ p{
 
 .hero-content .contact__us-btn a{
     background: #B45913;
-    padding: 10px 55px 10px 30px;
+    padding: 16px 50px 16px 30px;
 }
 .hero-content .contact__us-btn a::after{
     background: #E7751D;
@@ -351,12 +382,12 @@ p{
     height: 100vh;
     text-align: center;
     list-style: none;
-    top: 51px;
+    top: 43px;
     left: -7rem;
     display: none;
     background: #252525;
     z-index: 99;
-    padding: 15px 10px;
+    padding: 50px 10px 0 10px;
 }
 .dropMenu > li{
     background: #333333;
