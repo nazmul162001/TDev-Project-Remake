@@ -50,6 +50,9 @@ a{
     height:4.7rem;
     align-items: center;
     transition: .9s;
+    overflow: visible;
+    position: relative;
+    z-index: 99;
 }
 .navigation:hover{
     /* background: rgba(0, 0, 0, 0.5); */
@@ -132,7 +135,7 @@ a{
  
 .contact__us-btn a{
     position: relative;
-    padding: 15px 70px 15px 15px;
+    padding: 18px 70px 18px 15px;
     border: 2px solid #B45913;
     font-family: druk-wide-m , sans-serif;
     font-size: 8px;
@@ -172,6 +175,125 @@ a{
 
 /* Dropdown Start Here  */
 
+/* main menu style css mark up */
+.mainMenu {
+    text-align: center;
+    height: 50px;
+}
+.mainMenu > li{
+    display: inline-block;
+    position: relative;
+}
+
+.mainMenu > li > a {
+    padding: 16px 20px;
+    display: block;
+}
+/* drop menu styling */
+.dropMenu {
+    position: absolute;
+    width: 370px;
+    height: 100vh;
+    text-align: center;
+    list-style: none;
+    top: 43px;
+    left: -7rem;
+    display: none;
+    background: #252525;
+    z-index: 99;
+    padding: 50px 10px 0 10px;
+}
+.dropMenu > li{
+    background: #333333;
+    opacity: 0;
+    text-align: center;
+    margin-left: 2.3rem;
+    border-bottom: 15px solid #252525;
+    width: 80%;
+}
+.dropMenu > li:hover{
+    background: #555555;
+    transition: .5s;
+}
+
+.dropMenu li a {
+    padding: 28px 15px;
+    display: block;
+    color: rgba(235, 235, 235, .5);
+}
+.dropMenu li a:hover{
+    color: #fff !important;
+}
+.mainMenu > li:hover .dropMenu {
+    display: block;
+}
+.dropMenu img{
+    position: absolute;
+    left: 7%;
+    top: 20%;
+}
+.dropMenu > li:hover::after{
+    content: '\203A';
+    position: absolute;
+    top: 32%;
+    right: 16%;
+    color: #fff;
+}
+.dropMenu > li:hover::before{
+    content: '';
+    position: absolute;
+    top: 18%;
+    right: 10%;
+    z-index: 1;
+    width: 40px;
+    width: 2.3rem;
+    height: 60%;
+    background-color: transparent;
+    border: 1px solid #fff;
+    display: block;
+}
+
+/* some css animation styling */
+
+.dropMenu > li:nth-child(1) {
+    animation: sliding 300ms 0ms linear forwards;
+}
+.dropMenu > li:nth-child(2) {
+    animation: sliding 300ms 100ms linear forwards;
+}
+.dropMenu > li:nth-child(3) {
+    animation: sliding 300ms 200ms linear forwards;
+}
+.dropMenu > li:nth-child(4) {
+    animation: sliding 300ms 300ms linear forwards;
+}
+.dropMenu > li:nth-child(5) {
+    animation: sliding 300ms 400ms linear forwards;
+}
+.dropMenu > li:nth-child(6) {
+    animation: sliding 300ms 500ms linear forwards;
+}
+
+@keyframes sliding {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes sliding {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+}
+}
 
 /* hero section start here  */
 
@@ -206,11 +328,11 @@ a{
     letter-spacing:.1rem;
 }
 .content-text{
-    width: 80%;
+    width: 100%;
     margin-bottom: 2.25rem;
     color: #fff;
     font-size:1.2rem ;
-    font-family: sans-serif;
+    font-family: openSans-regular;
 }
 p{
     display: block;
@@ -224,6 +346,7 @@ p{
 .hero-content .contact__us-btn a{
     background: #B45913;
     padding: 16px 50px 16px 30px;
+    font-family: druk-wide-m;
 }
 .hero-content .contact__us-btn a::after{
     background: #E7751D;
@@ -345,6 +468,78 @@ p{
     right: 6.1rem;
 }
 
+/* careers text  */
+.hero-large-decoration {
+    top: 40rem;
+    right: 4.5625rem;
+}
+.hero-large-decoration {
+    position: absolute;
+    top: 40rem;
+    z-index: 1;
+    right: 5.375rem;
+    transform-origin: right;
+    font-size: 100px;
+    color: #333333;
+    letter-spacing: 0.81px;
+    display: inline-flex;
+    flex-direction: column;
+    font-family: druk-wide-m;
+    text-transform: uppercase;
+    pointer-events: none;
+    transform: rotate(90deg);
+}
+
+
+
+
+
+
+
+/* drop icon  */
+.dropdown-icon a{
+    position: relative;
+}
+.mainMenu .dropdown-icon::before{
+    content: '\2212';
+    position: absolute;
+    top: 32%;
+    right: 5%;
+    z-index: 1;
+    height: 100%;
+    display: none;
+    font-size: 13px;
+}
+.mainMenu .dropdown-icon:hover::before{
+    display: block;
+}
+
+
+.mainMenu .dropdown-icon2 {
+    position: relative;
+}
+.mainMenu .dropdown-icon2::before{
+    content: '\002B';
+    position: absolute;
+    top: 32%;
+    right: 5%;
+    z-index: 1;
+    height: 100%;
+    display: block;
+    color: #fff;
+    font-size: 13px;
+}
+.mainMenu .dropdown-icon2:hover::before{
+    display: none;
+}
+
+
+
+
+
+
+
+
 .opens{
     width: 100%;
     height: 100vh;
@@ -352,131 +547,3 @@ p{
     margin-top: -200px;
 }
 
-
-
-
-
-
-
-
-
-
-/* main menu style css mark up */
-.mainMenu {
-    text-align: center;
-    height: 50px;
-}
-.mainMenu > li{
-    display: inline-block;
-    position: relative;
-}
-
-.mainMenu > li > a {
-    padding: 16px 20px;
-    display: block;
-}
-/* drop menu styling */
-.dropMenu {
-    position: absolute;
-    width: 370px;
-    height: 100vh;
-    text-align: center;
-    list-style: none;
-    top: 43px;
-    left: -7rem;
-    display: none;
-    background: #252525;
-    z-index: 99;
-    padding: 50px 10px 0 10px;
-}
-.dropMenu > li{
-    background: #333333;
-    opacity: 0;
-    text-align: center;
-    margin-left: 2.3rem;
-    border-bottom: 15px solid #252525;
-    width: 80%;
-}
-.dropMenu > li:hover{
-    background: #555555;
-    transition: .5s;
-}
-
-.dropMenu li a {
-    padding: 28px 15px;
-    display: block;
-    color: rgba(235, 235, 235, .5);
-}
-.dropMenu li a:hover{
-    color: #fff !important;
-}
-.mainMenu > li:hover .dropMenu {
-    display: block;
-}
-.dropMenu img{
-    position: absolute;
-    left: 7%;
-    top: 20%;
-}
-.dropMenu > li:hover::after{
-    content: '\203A';
-    position: absolute;
-    top: 32%;
-    right: 16%;
-    color: #fff;
-}
-.dropMenu > li:hover::before{
-    content: '';
-    position: absolute;
-    top: 18%;
-    right: 10%;
-    z-index: 1;
-    width: 40px;
-    width: 2.3rem;
-    height: 60%;
-    background-color: transparent;
-    border: 1px solid #fff;
-    display: block;
-}
-
-/* some css animation styling */
-
-.dropMenu > li:nth-child(1) {
-    animation: sliding 300ms 0ms linear forwards;
-}
-.dropMenu > li:nth-child(2) {
-    animation: sliding 300ms 100ms linear forwards;
-}
-.dropMenu > li:nth-child(3) {
-    animation: sliding 300ms 200ms linear forwards;
-}
-.dropMenu > li:nth-child(4) {
-    animation: sliding 300ms 300ms linear forwards;
-}
-.dropMenu > li:nth-child(5) {
-    animation: sliding 300ms 400ms linear forwards;
-}
-.dropMenu > li:nth-child(6) {
-    animation: sliding 300ms 500ms linear forwards;
-}
-
-@keyframes sliding {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@-webkit-keyframes sliding {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-}
-}
