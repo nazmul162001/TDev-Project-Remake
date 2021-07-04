@@ -5,6 +5,9 @@
     box-sizing: border-box;
     outline: none;
 }
+
+/* // fonts have been used // */
+
 @font-face {
     font-family: forza;
     src: url(../fonts/forza-bold.woff);
@@ -26,9 +29,11 @@
     src: url(../fonts/OpenSans-SemiboldItalic.woff);
 }
 
+        /* main color  */
 :root {
     --primaryColor: #e5761d;
 }
+
 body{
     width: 100%;
     height: 100vh;
@@ -37,6 +42,7 @@ body{
     font-family: forza;
 }
 
+        /* shorts */
 a{
     text-decoration: none;
     text-transform: uppercase;
@@ -85,7 +91,7 @@ a{
     transform: translateX(-50%) scaleX(1);
 }
 
-/* nav-menu  */
+            /* nav-menu  */
 
 .navigation .nav-menu > ul{
     display: flex;
@@ -95,6 +101,7 @@ a{
 }
 .navigation .nav-menu ul li{
     list-style: none;
+    text-align: left;
 }
 .navigation .nav-menu ul li a{
     position: relative;
@@ -126,14 +133,8 @@ a{
     transform: translateX(-50%) scaleX(1);
 }
 
-/* dropdown  */
 
-
-
-
-/* contact us button  */
- 
-.contact__us-btn a{
+.contact__us-btn a{                     /* contact us button  */
     position: relative;
     padding: 18px 70px 18px 15px;
     border: 2px solid #B45913;
@@ -173,9 +174,9 @@ a{
     z-index: 2;
  }
 
-/* Dropdown Start Here  */
-
-/* main menu style css mark up */
+                            /* Dropdown Start Here  */
+                            /*                       */
+                             /*  main menu style     */
 .mainMenu {
     text-align: center;
     height: 50px;
@@ -189,14 +190,14 @@ a{
     padding: 16px 20px;
     display: block;
 }
-/* drop menu styling */
+                                /* drop menu styling */
 .dropMenu {
     position: absolute;
     width: 370px;
     height: 100vh;
     text-align: center;
     list-style: none;
-    top: 43px;
+    top: 42px;
     left: -7rem;
     display: none;
     background: #252525;
@@ -210,6 +211,7 @@ a{
     margin-left: 2.3rem;
     border-bottom: 15px solid #252525;
     width: 80%;
+    padding-left: 3rem;
 }
 .dropMenu > li:hover{
     background: #555555;
@@ -220,6 +222,7 @@ a{
     padding: 28px 15px;
     display: block;
     color: rgba(235, 235, 235, .5);
+    font-size: .750rem !important;
 }
 .dropMenu li a:hover{
     color: #fff !important;
@@ -229,21 +232,21 @@ a{
 }
 .dropMenu img{
     position: absolute;
-    left: 7%;
+    left: -15%;
     top: 20%;
 }
 .dropMenu > li:hover::after{
     content: '\203A';
     position: absolute;
-    top: 32%;
-    right: 16%;
+    top: 35%;
+    right: 12%;
     color: #fff;
 }
 .dropMenu > li:hover::before{
     content: '';
     position: absolute;
     top: 18%;
-    right: 10%;
+    right: 6%;
     z-index: 1;
     width: 40px;
     width: 2.3rem;
@@ -253,7 +256,7 @@ a{
     display: block;
 }
 
-/* some css animation styling */
+                    /* css animation */
 
 .dropMenu > li:nth-child(1) {
     animation: sliding 300ms 0ms linear forwards;
@@ -295,17 +298,22 @@ a{
 }
 }
 
-/* hero section start here  */
+                    /* hero section start here  */
 
 .hero-wrapper{
-    padding: 5rem 17.5rem 8.125rem 15rem;
+    padding: 6.1rem 17.5rem 8.125rem 15rem;
     display: grid;
     grid-template-columns: auto auto;
+}
+span.headaer-subtitle{
+    font-size: 1.01rem;
+    padding-bottom: .9rem;
 }
 .hero-content{
     width: 49.5%;
     position: relative;
     z-index: 5;
+    top: -3%;
 }
 .headaer-subtitle{
     font-size: 2rem;
@@ -326,12 +334,13 @@ a{
     line-height: 1.2;
     color: #fff;
     letter-spacing:.1rem;
+    font-weight: 600;
 }
 .content-text{
     width: 100%;
-    margin-bottom: 2.25rem;
+    margin-bottom: 4rem;
     color: #fff;
-    font-size:1.2rem ;
+    font-size:1rem ;
     font-family: openSans-regular;
 }
 p{
@@ -341,7 +350,7 @@ p{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-/* contact us  */
+                    /* contact us  */
 
 .hero-content .contact__us-btn a{
     background: #B45913;
@@ -355,7 +364,7 @@ p{
     right: 6%;
  }
 
- /* hero-media  */
+                    /* hero-media  */
 
  .hero__media{
      position: relative;
@@ -363,12 +372,14 @@ p{
      position: relative;
      z-index: 3;
      margin-bottom: 5rem;
+     top: -4%;
+    left: 6%;
  }
  .hero__media::before{
     content: "";
     position: absolute;
     top: 30px;
-    top: 1.875rem;
+    top: 3.875rem;
     left: -16rem;
     z-index: 2;
     width: 480px;
@@ -468,7 +479,8 @@ p{
     right: 6.1rem;
 }
 
-/* careers text  */
+                /* careers text  */
+
 .hero-large-decoration {
     top: 40rem;
     right: 4.5625rem;
@@ -496,7 +508,7 @@ p{
 
 
 
-/* drop icon  */
+                            /* drop icon  */
 .dropdown-icon a{
     position: relative;
 }
@@ -513,8 +525,6 @@ p{
 .mainMenu .dropdown-icon:hover::before{
     display: block;
 }
-
-
 .mainMenu .dropdown-icon2 {
     position: relative;
 }
@@ -538,7 +548,7 @@ p{
 
 
 
-
+        /* opens section  */
 
 .opens{
     width: 100%;
