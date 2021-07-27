@@ -37,7 +37,7 @@
 body{
     width: 100%;
     height: 100vh;
-    background: url(../img/hero/bg.jpg);
+    background: #252525 url(../img/hero/bg.jpg);
     background-repeat: no-repeat;
     font-family: forza;
 }
@@ -301,7 +301,7 @@ a{
                     /* hero section start here  */
 
 .hero-wrapper{
-    padding: 6.1rem 17.5rem 8.125rem 15rem;
+    padding: 6.1rem 17.5rem 2.15rem 15rem;
     display: grid;
     grid-template-columns: auto auto;
 }
@@ -488,7 +488,7 @@ p{
 .hero-large-decoration {
     position: absolute;
     top: 40rem;
-    z-index: 1;
+    z-index: -1;
     right: 5.375rem;
     transform-origin: right;
     font-size: 100px;
@@ -542,21 +542,3 @@ p{
 .mainMenu .dropdown-icon2:hover::before{
     display: none;
 }
-
-
-
-
-
-
-        /* opens section  */
-
-.opens{
-    width: 100%;
-    height: 100vh;
-    background: #252525;
-    margin-top: -200px;
-}
-
-
-/* Preloader  */
-
